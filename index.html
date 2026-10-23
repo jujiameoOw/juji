@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Match ♡</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff0f5;
+      color: #a64d79;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+    }
+
+    .info {
+      margin: 15px;
+      font-size: 17px;
+    }
+
+    .game {
+      display: grid;
+      grid-template-columns: repeat(4, 70px);
+      gap: 10px;
+      justify-content: center;
+      margin: 25px auto;
+    }
+
+    .card {
+      width: 70px;
+      height: 70px;
+      background: #f3b6ce;
+      border: none;
+      border-radius: 12px;
+      font-size: 30px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card.open,
+    .card.matched {
+      background: white;
+    }
+
+    .card.matched {
+      border: 2px solid #e89ab8;
+    }
+
+    button#restart {
+      padding: 10px 20px;
+      background: #df83aa;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #message {
+      font-weight: bold;
+      margin-top: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Memory Match ♡</h1>
+  <p>Find all the matching pairs!</p>
+
+  <div class="info">
+    Moves: <span id="moves">0</span>
+    &nbsp; | &nbsp;
+    Time: <span id="time">0</span>s
+  </div>
+
+  <div class="game" id="game"></div>
+
+  <p id="message"></p>
+  <button id="restart">Play Again ↻</button>
+
+<script src="script.js"></script>
+</body>
+</html>
